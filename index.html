@@ -4,59 +4,60 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link 
-  href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
-  rel="stylesheet"
-/>
+  <title>Sign In and Sign up Form</title>
   <link rel="stylesheet" href="style.css">
-  <title>Landing page</title>
+  <script src="https://kit.fontawesome.com/8d3d116e2c.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
-    <nav>
-      <div class="nav_logo">MEDIBuddy</div>
-      <ul class="nav_links">
-<li class="link"><a href="#">Home</a></li>
-<li class="link"><a href="#">About Us</a></li>
-<li class="link"><a href="#">Courses</a></li>
-<li class="link"><a href="#">Pages</a></li>
-<li class="link"><a href="#">Blog</a></li>
-<li class="link"><a href="#">Contact</a></li>
-  </ul>
-  <button class="btn">Register Now</button>
-    </nav>
-    <header class="header">
-<div class="content">
-  <h1><span>Get Quick</span><br>Medical Services</h1>
-  <p>
-    In todays's fast-paced world,access to promt and efficient medical services is of paramount importance. When faced with a medical emergency or seeking immediate medical attention, the ability to receive quick medical services can significantly impact the outcome of a situation.
-  </p>
-  <button class="btn">Get Services</button>
-</div>
-<div class="image">
-  <span class="image_bg"></span>
-  <img src="doctor.avif" alt="header image">
- <div class="image_content image_content_1">
-  <span><i class="ri-user-3-line"></i></span>
-  <div class="details">
-    <h4>1520+</h4>
-  <p>Active Clients</p>
+    <div class="form-box">
+      <h1 id="title">Sign Up</h1>
+      <form>
+        <div class="input-group">
+          <div class="input-field" id="nameField">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" placeholder="Name">
+          </div>
+          <div class="input-group">
+            <div class="input-field">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" placeholder="email">
+            </div>
+            <div class="input-group">
+              <div class="input-field">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="password">
+              </div>
+              <p>
+                Lost password<a href="#">Click here!</a>
+              </p>
+        </div>
+        <div class="btn-field">
+        <button class="button" id="signupbtn" onclick="upev();">Sign up</button>
+        <button class="button" id="signinbtn" class="disable" onclick="onclickev();">Sign in</button>
+        </div>
+      </form>
+    </div>
   </div>
- </div>
- <div class="image_content image_content_2">
-  <ul>
-    <li>
-      <span><i class="ri-check-line"></i></span>
-      Get 20% off on every !st month
-    </li>
-    <li>
-      <span><i class="ri-check-line"></i></span>
-      Expert Doctors
-    </li>
-  </ul>
- </div>
-</div>
-</header>
-  </div>
+  <script>
+    let signupbtn=document.getElementById("signupbtn");
+    let signinbtn=document.getElementById("signinbtn");
+     let nameField=document.getElementById("nameField");
+     let title=document.getElementById("title");
+     function onclickev()
+     {
+      nameField.style.maxHeight = "0";
+      title.innerHTML="Sign In";
+      signupbtn.classList.add("disable");
+      signinbtn.classList.remove("disable");
+     }
+     function upev()
+     {
+      nameField.style.maxHeight = "60px";
+      title.innerHTML="Sign Up";
+      signupbtn.classList.remove("disable");
+      signinbtn.classList.add("disable");
+     }
+</script>
 </body>
-</html>
+</html> 
