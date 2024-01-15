@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="calculator.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calculator project</title>
+</head>
+<body>
+  <div id="calc">
+   <input type="text" id="display" readonly>  
+   <div class="btn-container">
+    <button class="btn"onclick="currentVlue='';    document.querySelector('#display').value=currentVlue;">C</button>
+    <button class="btn" onclick="currentVlue+='1';    document.querySelector('#display').value=currentVlue;">1</button>
+    <button class="btn"onclick="currentVlue+='2';    document.querySelector('#display').value=currentVlue;">2</button>
+    <button class="btn"onclick="currentVlue+='+';    document.querySelector('#display').value=currentVlue;">+</button>
+    <button class="btn"onclick="currentVlue+='3';    document.querySelector('#display').value=currentVlue;">3</button>
+    <button class="btn"onclick="currentVlue+='4';    document.querySelector('#display').value=currentVlue;">4</button>
+    <button class="btn"onclick="currentVlue+='-';    document.querySelector('#display').value=currentVlue;">-</button>
+    <button class="btn"onclick="currentVlue+='5';    document.querySelector('#display').value=currentVlue;">5</button>
+    <button class="btn"onclick="currentVlue+='6';    document.querySelector('#display').value=currentVlue;">6</button>
+    <button class="btn"onclick="currentVlue+='*';    document.querySelector('#display').value=currentVlue;">*</button>
+     <button class="btn"onclick="currentVlue+='7';    document.querySelector('#display').value=currentVlue;">7</button>
+     <button class="btn"onclick="currentVlue+='8';    document.querySelector('#display').value=currentVlue;">8</button>
+     <button class="btn"onclick="currentVlue+='/';    document.querySelector('#display').value=currentVlue;">/</button>
+     <button class="btn"onclick="
+     let result=eval(currentVlue);
+     currentVlue=result;    document.querySelector('#display').value=currentVlue;">=</button>
+     <button class="btn"onclick="currentVlue+='9';    document.querySelector('#display').value=currentVlue;">9</button>
+     <button class="btn"onclick="currentVlue+='0';    document.querySelector('#display').value=currentVlue;">0</button> <button class="btn"onclick="currentVlue+='.';    document.querySelector('#display').value=currentVlue;">.</button>
+    
+   </div>
+   </div>
+   
+  <script>
+    let currentVlue='';
+    document.querySelector('#display').value=currentVlue;
+  </script>
+</body>
+</html>

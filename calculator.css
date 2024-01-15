@@ -1,0 +1,26 @@
+#calc{
+  border: 1px solid rgb(60, 55, 55);
+  border-radius: 5px;
+  width: 300px;
+  height: 650px;
+}
+#display{
+  border: 8px sloid rgb(59, 55, 55);
+  margin-left: 10px;
+  margin-top: 40px;
+ 
+  width: 270px;
+  height: 70px;
+
+}
+.btn{
+  width: 79px;
+  height: 79px;
+  margin: 3px;
+}
+.btn-container{
+ 
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
